@@ -1,5 +1,5 @@
 # A clone of libobjcryst for Windows and Python3
-This is a clone of https://github.com/diffpy/libobjcryst
+This is a modified version of https://github.com/diffpy/libobjcryst
 
 ## Main differences from the original
 - Windows MSVC compilers compatibility
