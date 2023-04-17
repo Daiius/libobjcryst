@@ -28,8 +28,8 @@ if env['PLATFORM'] == 'darwin':
 
 # Compiler specific options
 if platform.system().lower() == "windows":
-    # Visual c++
-    env.PrependUnique(CCFLAGS=['/Ox', '/EHsc', '/MD'])
+    # Visual C++
+    env.PrependUnique(CCFLAGS=['/Ox', '/EHsc', '/MT'])
     env.AppendUnique(CPPDEFINES={'NDEBUG' : None})
     # env.AppendUnique(LINKFLAGS='/EXPORT')
 else:
