@@ -36,6 +36,7 @@ DefaultEnvironment(ENV=subdictionary(os.environ, '''
     PATH CPATH CPLUS_INCLUDE_PATH LIBRARY_PATH LD_RUN_PATH
     LD_LIBRARY_PATH DYLD_LIBRARY_PATH DYLD_FALLBACK_LIBRARY_PATH
     MACOSX_DEPLOYMENT_TARGET
+    INCLUDE LIB TEMP TMP
     '''.split())
                    )
 
@@ -56,13 +57,6 @@ if 'PREFIX' in os.environ:
         'prefix',
         'installation prefix directory',
         os.environ['PREFIX']))
-    vars.Update(env)
-elif 'CONDA_PREFIX' in os.environ:
-    # building for a conda environment
-    vars.Add(PathVariable(
-        'prefix',
-        'installation prefix directory',
-        os.environ['CONDA_PREFIX']))
     vars.Update(env)
 else:
     # Default: install in /usr/local
